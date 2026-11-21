@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: opal-stars-management
+    runtime: node
+    plan: starter
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    disk:
+      name: opal-stars-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /var/data/opal.sqlite
+      - key: PAYMENT_PROOF_DIRECTORY
+        value: /var/data/payment-proofs
+      - key: SESSION_SECRET
+        generateValue: true

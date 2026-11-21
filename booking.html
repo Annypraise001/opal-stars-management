@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f7f9fc">
+		<meta name="description" content="Request a professional celebrity booking with Opal Stars Management.">
+		<title>Book Celebrity | Opal Stars Management</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="booking.js" defer></script>
+	</head>
+	<body class="booking-page payment-page">
+		<header class="site-header">
+			<a class="brand" href="/" aria-label="Opal Stars Management home"><span class="brand-mark" aria-hidden="true">O<span>✦</span></span><span class="brand-name">OPAL STARS<small>MANAGEMENT</small></span></a>
+			<nav class="desktop-nav" aria-label="Main navigation"><a href="/#home">Home</a><a href="/#partners">About Us</a><a href="/#services">Services</a><a href="/#categories">Brands</a><a href="/#contact">Contact</a></nav>
+			<div class="header-actions">
+				<a class="header-link" href="#signin" data-auth-open="signin">Login</a><a class="header-link" href="#register" data-auth-open="register">Register</a><button class="header-link" type="button" data-logout hidden>Log out</button>
+				<button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/></svg></button>
+				<button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="booking-mobile-menu" data-menu-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+			</div>
+			<nav class="mobile-menu" id="booking-mobile-menu" aria-label="Mobile navigation" hidden><a href="/">Home</a><a href="/#partners">About Us</a><a href="/#services">Services</a><a href="/#categories">Brands</a><a href="/#contact">Contact</a><a href="/book">Book Now</a><div class="mobile-menu-actions"><a class="button button-secondary" href="#signin" data-auth-open="signin">Login</a><a class="button button-primary" href="#register" data-auth-open="register">Register</a><button class="button button-secondary" type="button" data-logout hidden>Log out</button><button class="button button-quiet" type="button" data-theme-toggle>Switch theme</button></div></nav>
+		</header>
+
+		<main>
+			<section class="booking-profile-hero" aria-labelledby="booking-title">
+				<div class="booking-profile-inner">
+					<img class="profile-portrait" data-celebrity-image alt="" hidden>
+					<h1 id="booking-title">Book <span data-celebrity-name>Celebrity</span></h1>
+					<p class="profile-subtitle">Schedule a professional booking or appearance</p>
+					<div class="profile-meta"><span class="profile-badge">☆ FEATURED</span><span class="profile-chip">⌖ <span data-celebrity-country>Loading</span></span><span class="profile-chip profile-role">♧ <span data-celebrity-role></span></span><span class="profile-chip">▣ <span data-active-years>Years active details provided by management</span></span><span class="profile-chip">★ <span data-celebrity-rating>Rating on request</span></span></div>
+					<p class="profile-description">Book <span data-description-name>this celebrity</span> for your event, appearance, or professional engagement. Our team will coordinate the details for a seamless experience.</p>
+					<p class="profile-fee" data-fee-summary hidden>◇ <strong data-base-fee></strong> base booking fee</p>
+				</div>
+			</section>
+
+			<section class="booking-workspace" aria-labelledby="form-heading">
+				<form class="booking-form" data-booking-form novalidate>
+					<input type="hidden" name="celebrityId">
+					<header class="booking-form-header">
+						<div class="booking-form-title"><span class="booking-form-icon" aria-hidden="true">▣</span><div><h2 id="form-heading">Book <span data-form-celebrity>Celebrity</span></h2><p data-form-subtitle>Schedule a professional booking or appearance</p></div></div>
+						<span class="booking-type-badge">▣ &nbsp; Professional Booking</span>
+						<div class="booking-step-tabs" role="tablist" aria-label="Booking steps"><button type="button" class="booking-step-tab is-active" data-step-tab="1" aria-selected="true">▢ &nbsp; Event Details</button><button type="button" class="booking-step-tab" data-step-tab="2" aria-selected="false">☷ &nbsp; Requirements</button><button type="button" class="booking-step-tab" data-step-tab="3" aria-selected="false">▤ &nbsp; Payment</button></div>
+					</header>
+
+					<section class="booking-step-panel" data-step-panel="1" aria-labelledby="event-step-title">
+						<h3 class="visually-hidden" id="event-step-title">Event Details</h3>
+						<div class="booking-field-grid">
+							<label>Event Type <span>*</span><select name="eventType" required><option value="">Select event type</option><option>Corporate Event</option><option>Private Party</option><option>Concert or Performance</option><option>Meet &amp; Greet</option><option>Virtual Appearance</option><option>Other</option></select></label>
+							<label>Event Location <span>*</span><input name="eventLocation" required maxlength="250" placeholder="City, State, Country" autocomplete="address-level2"></label>
+							<label>Event Date <span>*</span><input name="eventDate" type="date" required></label>
+							<label>Event Time <span>*</span><input name="eventTime" type="time" required></label>
+							<label>Full Name <span>*</span><input name="fullName" required minlength="2" maxlength="100" placeholder="Your full name" autocomplete="name"></label>
+							<label>Email <span class="optional-label">(optional)</span><input name="email" type="email" maxlength="254" placeholder="Your email address" autocomplete="email"></label>
+							<label>Phone Number <span>*</span><input name="phone" type="tel" required maxlength="40" placeholder="Your phone number" autocomplete="tel"></label>
+							<label>Gender <span class="optional-label">(optional)</span><select name="gender"><option value="">Select gender (optional)</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option></select></label>
+							<label class="duration-field">Duration (minutes) <span>*</span><span class="duration-control"><input name="durationMinutes" type="range" min="15" max="240" step="15" value="60"><output data-duration-output>60 minutes</output></span></label>
+						</div>
+						<p class="booking-validation" data-step-one-error role="alert" hidden></p>
+						<div class="booking-form-actions booking-form-actions-end"><span></span><button class="button button-blue booking-next" type="button" data-next-step="2">Next: Requirements <span aria-hidden="true">→</span></button></div>
+					</section>
+
+					<section class="booking-step-panel" data-step-panel="2" aria-labelledby="requirements-step-title" hidden>
+						<h3 id="requirements-step-title">Event Requirements</h3>
+						<p class="booking-muted">Share any details that will help the celebrity and our team prepare.</p>
+						<label class="requirements-label">Additional requirements or notes <span class="optional-label">(optional)</span><textarea name="requirements" rows="6" maxlength="3000" placeholder="Describe technical requirements, equipment needs, accessibility needs, or specific requests."></textarea></label>
+						<div class="celebrity-requirements"><h4>ⓘ &nbsp; Celebrity Requirements</h4><p>Specific requirements will be confirmed by our booking team after they review your request.</p></div>
+						<p class="booking-validation" data-step-two-error role="alert" hidden></p>
+						<div class="booking-form-actions"><button class="button button-back" type="button" data-previous-step="1">← &nbsp; Back: Details</button><button class="button button-blue booking-next" type="button" data-next-step="3">Next: Payment <span aria-hidden="true">→</span></button></div>
+					</section>
+
+					<section class="booking-step-panel" data-step-panel="3" aria-labelledby="payment-step-title" hidden>
+						<h3 class="visually-hidden" id="payment-step-title">Payment</h3>
+						<section class="booking-summary" aria-labelledby="summary-title"><h3 id="summary-title">▣ &nbsp; Booking Summary</h3><dl><div><dt>Celebrity:</dt><dd data-summary-celebrity>Loading</dd></div><div><dt>Base Booking Fee:</dt><dd data-summary-base>Loading</dd></div><div><dt>Service Fee:</dt><dd data-summary-service>Configure service fee</dd></div><div class="summary-total"><dt>Total Amount:</dt><dd data-summary-total>Configure service fee</dd></div></dl></section>
+						<section class="payment-method-section"><h3>▤ &nbsp; Select Payment Method</h3><label class="visually-hidden" for="payment-method">Payment method</label><select id="payment-method" name="paymentMethod"><option value="">Choose a payment method...</option></select><p class="payment-unavailable" data-payment-config-message role="status" hidden></p></section>
+						<section class="payment-details" data-payment-details><div class="payment-default-qr" data-payment-default-qr><h3>▦ &nbsp; Bitcoin QR Code</h3><p>Scan this code to pay with Bitcoin, or choose another payment method above.</p><img data-default-payment-qr alt="Bitcoin wallet QR code"></div><div data-payment-selected-details hidden><h3>▣ &nbsp; Payment Details</h3><div class="payment-instructions"><h4>ⓘ &nbsp; Payment Instructions</h4><ol><li>Send the exact amount shown in your booking summary to Opal Stars Management using the selected payment method.</li><li>Upload a screenshot or receipt of your transaction as proof.</li><li>Submit the form and wait for confirmation from our team.</li></ol></div><p class="payment-network" data-payment-network hidden></p><div class="payment-qr-block" data-payment-qr-block hidden><h4>▦ &nbsp; QR Code Payment</h4><img data-payment-qr alt="Configured payment QR code" hidden></div><div class="payment-address-block" data-payment-address-block hidden><label for="payment-address"><span data-address-label>Payment</span> address</label><div class="payment-address-control"><input id="payment-address" readonly><button type="button" class="button button-copy" data-copy-address>Copy</button></div></div><div class="bank-details-block" data-bank-details hidden><h4>Bank Transfer Details</h4><dl data-bank-values></dl></div><label class="proof-upload">Upload Payment Proof <span>*</span><span class="proof-dropzone"><span class="upload-icon" aria-hidden="true">⇧</span><strong>Choose file</strong> or drag and drop<small>PNG, JPG, GIF, or PDF up to 10MB</small><input type="file" name="paymentProof" accept="image/png,image/jpeg,image/gif,application/pdf" data-proof-input></span></label></div></section>
+						<p class="booking-validation" data-payment-error role="alert" hidden></p>
+						<label class="terms-agreement"><input type="checkbox" name="acceptedTerms" value="true" required><span>I agree to the <a href="/#terms">Terms and Conditions</a> and <a href="/#cancellation">Cancellation Policy</a></span></label>
+						<div class="booking-form-actions"><button class="button button-back" type="button" data-previous-step="2">← &nbsp; Back</button><button class="button button-blue booking-submit" type="submit" data-booking-submit>▣ &nbsp; Submit Booking Request</button></div>
+					</section>
+					<p class="booking-submit-status" data-booking-status aria-live="polite"></p>
+				</form>
+
+				<aside class="booking-faq" aria-labelledby="booking-faq-title"><h2 id="booking-faq-title">ⓘ &nbsp; Frequently Asked Questions</h2><details><summary>What happens after I book?</summary><p>Your request is saved for review. Our team will confirm availability and contact you using the details you provide.</p></details><details><summary>What is the cancellation policy?</summary><p>Cancellation terms will be provided by our team with your booking offer before any payment is requested.</p></details><details><summary>Can I change my booking details after submitting?</summary><p>Contact the booking team with your request. Changes are subject to availability and written confirmation.</p></details></aside>
+				<aside class="booking-support"><span class="service-icon" aria-hidden="true">♧</span><h2>Need Help with Your Booking?</h2><p>Our booking specialists are available to assist with questions about your request.</p><div><a class="button button-blue" href="mailto:bookings@opalstarsmanagement.com">☏ &nbsp; Chat with Support</a><a class="button button-secondary" href="tel:+18606346879">☎ &nbsp; Call Us</a></div></aside>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-main"><div class="footer-about"><a class="brand brand-inverted" href="/" aria-label="Opal Stars Management home"><span class="brand-mark" aria-hidden="true">O<span>✦</span></span><span class="brand-name">OPAL STARS<small>MANAGEMENT</small></span></a><h2>Opal Stars Management</h2><p>Connect with your favorite celebrities. Book meet &amp; greets, get VIP access, and create unforgettable memories.</p><address><a href="tel:+18606346879">⌕ &nbsp; +1 (860) 634-6879</a><a href="mailto:info@opalstarsmanagement.com">✉ &nbsp; info@opalstarsmanagement.com</a><a href="mailto:bookings@opalstarsmanagement.com">✉ &nbsp; bookings@opalstarsmanagement.com</a></address></div><nav class="footer-links" aria-label="Footer navigation"><h3>Quick Links</h3><a href="/">Home</a><a href="/#partners">About Us</a><a href="/#services">Services</a><a href="/#categories">Brands</a><a href="/#contact">Contact</a><a href="/book">Book Now</a></nav><form class="newsletter" data-newsletter-form><h3>Newsletter</h3><p>Subscribe to get the latest celebrity news and exclusive offers.</p><label class="visually-hidden" for="booking-newsletter-email">Your email address</label><div class="newsletter-control"><input id="booking-newsletter-email" name="email" type="email" placeholder="Your email address" required><button class="button button-blue" type="submit">✉ &nbsp; Subscribe</button></div><p class="form-status" data-newsletter-status aria-live="polite"></p></form></div>
+			<div class="footer-bottom"><p>© 2026 <strong>Opal Stars Management.</strong> All rights reserved.</p><nav aria-label="Legal links"><a href="/#terms">Terms &amp; Conditions</a><a href="/#privacy">Privacy Policy</a><a href="/#accessibility">Accessibility</a></nav><div class="social-links" aria-label="Social media"><a href="#instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" class="fill-dot"/></svg></a><a href="#facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h1.7V1.4c-.8-.1-1.8-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h2.7v8z"/></svg></a><a href="#x" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h4.5l11.5 18h-4.5L4 3Zm1.8 0 12.4 18M20 3 5 21"/></svg></a><a href="#youtube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" class="icon-cutout"/></svg></a></div></div>
+		</footer>
+		<div class="utility-dock" aria-label="Quick tools"><button class="language-button" type="button" aria-label="Choose language" aria-expanded="false" data-language-toggle><span class="flag" aria-hidden="true">🇬🇧</span><span data-language-label>EN</span><span aria-hidden="true">⌃</span></button><div class="language-menu" data-language-menu hidden><button type="button" data-language="EN">🇬🇧 English</button><button type="button" data-language="ES">🇪🇸 Español</button><button type="button" data-language="FR">🇫🇷 Français</button></div><button class="utility-action" type="button" aria-label="Open chat" data-utility-action><svg class="chat-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.7 8.7 0 0 1-3.6-.8L4 20l1.2-3.7A7.2 7.2 0 0 1 4 12c0-4.1 3.6-7.5 8-7.5s8 3.1 8 7Z"/></svg><svg class="top-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></button></div>
+		<aside class="chat-panel" data-chat-panel hidden aria-label="Chat with Opal Stars"><button type="button" class="chat-close" aria-label="Close chat" data-chat-close>×</button><h2>How can we help?</h2><p>Our booking team is here to help you plan a great experience.</p><a class="button button-blue" href="mailto:bookings@opalstarsmanagement.com">Message our team</a></aside>
+		<div class="modal-backdrop" data-auth-modal hidden><section class="account-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title"><button class="modal-close" type="button" aria-label="Close dialog" data-auth-close>×</button><p class="eyebrow">Opal Stars Management</p><h2 id="auth-title" data-auth-title>Welcome back</h2><p data-auth-description>Sign in to manage your celebrity booking account.</p><form data-auth-form><label data-auth-name-field hidden>Full name<input type="text" name="fullName" autocomplete="name" minlength="2" maxlength="100"></label><label>Email address<input type="email" name="email" autocomplete="email" required></label><label>Password<input type="password" name="password" autocomplete="current-password" minlength="10" maxlength="128" required></label><button class="button button-blue" type="submit" data-auth-submit>Sign In</button><p class="form-status" data-auth-status aria-live="polite"></p></form></section></div>
+	</body>
+</html>

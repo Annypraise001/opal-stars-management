@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f7f9fc">
+		<meta name="description" content="Book celebrities for appearances, events, fan experiences, and more with Opal Stars Management.">
+		<title>Book Celebrity Services | Opal Stars Management</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="book.js" defer></script>
+	</head>
+	<body class="booking-page">
+		<header class="site-header">
+			<a class="brand" href="/" aria-label="Opal Stars Management home">
+				<span class="brand-mark" aria-hidden="true">O<span>✦</span></span>
+				<span class="brand-name">OPAL STARS<small>MANAGEMENT</small></span>
+			</a>
+			<nav class="desktop-nav" aria-label="Main navigation">
+				<a href="/#home">Home</a>
+				<a href="/#partners">About Us</a>
+				<a href="/#services">Services</a>
+				<a href="/#categories">Brands</a>
+				<a href="/#contact">Contact</a>
+			</nav>
+			<div class="header-actions">
+				<a class="header-link" href="#signin" data-auth-open="signin">Login</a>
+				<a class="header-link" href="#register" data-auth-open="register">Register</a>
+				<button class="header-link" type="button" data-logout hidden>Log out</button>
+				<button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle>
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/></svg>
+				</button>
+				<button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="book-mobile-menu" data-menu-toggle>
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+				</button>
+			</div>
+			<nav class="mobile-menu" id="book-mobile-menu" aria-label="Mobile navigation" hidden>
+				<a href="/#home">Home</a>
+				<a href="/#partners">About Us</a>
+				<a href="/#services">Services</a>
+				<a href="/#categories">Brands</a>
+				<a href="/#contact">Contact</a>
+				<a href="/book" aria-current="page">Book Now</a>
+				<div class="mobile-menu-actions">
+					<a class="button button-secondary" href="#signin" data-auth-open="signin">Login</a>
+					<a class="button button-primary" href="#register" data-auth-open="register">Register</a>
+					<button class="button button-secondary" type="button" data-logout hidden>Log out</button>
+					<button class="button button-quiet" type="button" data-theme-toggle>Switch theme</button>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="catalog-hero" aria-labelledby="catalog-hero-title">
+				<div class="catalog-hero-inner">
+					<a class="catalog-back" href="/" aria-label="Back to Home"><span aria-hidden="true">←</span> Back to Home</a>
+					<p class="catalog-mark" aria-hidden="true">✦</p>
+					<h1 id="catalog-hero-title">Celebrity Services &amp; Experiences</h1>
+					<p>Explore exclusive celebrity bookings, VIP access, fan experiences, donations, reservations, and investment opportunities all in one place.</p>
+				</div>
+			</section>
+
+			<section class="booking-catalog" aria-labelledby="catalog-title">
+				<div class="catalog-heading">
+					<h2 id="catalog-title">Featured Celebrities</h2>
+					<p>Book any of our premium celebrities for your special events, appearances, and occasions</p>
+					<p class="catalog-count" data-catalog-count aria-live="polite">Loading celebrity catalog...</p>
+				</div>
+				<div class="booking-card-grid" data-booking-grid aria-live="polite"></div>
+				<p class="catalog-empty" data-catalog-empty hidden>No celebrities found. Try another search.</p>
+				<nav class="catalog-pagination" aria-label="Celebrity pages" data-pagination></nav>
+				<p class="catalog-range" data-catalog-range></p>
+				<p class="catalog-error" data-catalog-error role="alert" hidden></p>
+			</section>
+
+			<section class="booking-cta" aria-labelledby="booking-cta-title">
+				<div class="booking-cta-inner">
+					<h2 id="booking-cta-title">Ready to Book Your Celebrity?</h2>
+					<p>Get in touch with our booking specialists for personalized assistance and exclusive packages.</p>
+					<div class="booking-cta-actions">
+						<button class="button button-white" type="button" data-open-inquiry="contact">☎ &nbsp; Contact Us</button>
+						<a class="button button-outline-light" href="/#services">ⓘ &nbsp; Booking FAQ</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-main">
+				<div class="footer-about">
+					<a class="brand brand-inverted" href="/" aria-label="Opal Stars Management home"><span class="brand-mark" aria-hidden="true">O<span>✦</span></span><span class="brand-name">OPAL STARS<small>MANAGEMENT</small></span></a>
+					<h2>Opal Stars Management</h2>
+					<p>Connect with your favorite celebrities. Book meet &amp; greets, get VIP access, and create unforgettable memories.</p>
+					<address><a href="tel:+18606346879">⌕ &nbsp; +1 (860) 634-6879</a><a href="mailto:info@opalstarsmanagement.com">✉ &nbsp; info@opalstarsmanagement.com</a><a href="mailto:bookings@opalstarsmanagement.com">✉ &nbsp; bookings@opalstarsmanagement.com</a></address>
+				</div>
+				<nav class="footer-links" aria-label="Footer navigation"><h3>Quick Links</h3><a href="/">Home</a><a href="/#partners">About Us</a><a href="/#services">Services</a><a href="/#categories">Brands</a><a href="/#contact">Contact</a><a href="/book">Book Now</a></nav>
+				<form class="newsletter" data-newsletter-form><h3>Newsletter</h3><p>Subscribe to get the latest celebrity news and exclusive offers.</p><label class="visually-hidden" for="book-newsletter-email">Your email address</label><div class="newsletter-control"><input id="book-newsletter-email" name="email" type="email" placeholder="Your email address" required><button class="button button-blue" type="submit">✉ &nbsp; Subscribe</button></div><p class="form-status" data-newsletter-status aria-live="polite"></p></form>
+			</div>
+			<div class="footer-bottom"><p>© 2026 <strong>Opal Stars Management.</strong> All rights reserved.</p><nav aria-label="Legal links"><a href="/#terms">Terms &amp; Conditions</a><a href="/#privacy">Privacy Policy</a><a href="/#accessibility">Accessibility</a></nav><div class="social-links" aria-label="Social media"><a href="#instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" class="fill-dot"/></svg></a><a href="#facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h1.7V1.4c-.8-.1-1.8-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h2.7v8z"/></svg></a><a href="#x" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h4.5l11.5 18h-4.5L4 3Zm1.8 0 12.4 18M20 3 5 21"/></svg></a><a href="#youtube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" class="icon-cutout"/></svg></a></div></div>
+		</footer>
+
+		<div class="utility-dock" aria-label="Quick tools">
+			<button class="language-button" type="button" aria-label="Choose language" aria-expanded="false" data-language-toggle><span class="flag" aria-hidden="true">🇬🇧</span><span data-language-label>EN</span><span aria-hidden="true">⌃</span></button>
+			<div class="language-menu" data-language-menu hidden><button type="button" data-language="EN">🇬🇧 English</button><button type="button" data-language="ES">🇪🇸 Español</button><button type="button" data-language="FR">🇫🇷 Français</button></div>
+			<button class="utility-action" type="button" aria-label="Open chat" data-utility-action><svg class="chat-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.7 8.7 0 0 1-3.6-.8L4 20l1.2-3.7A7.2 7.2 0 0 1 4 12c0-4.1 3.6-7.5 8-7.5s8 3.1 8 7Z"/></svg><svg class="top-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></button>
+		</div>
+		<aside class="chat-panel" data-chat-panel hidden aria-label="Chat with Opal Stars"><button type="button" class="chat-close" aria-label="Close chat" data-chat-close>×</button><h2>How can we help?</h2><p>Our booking team is here to help you plan a great experience.</p><button class="button button-blue" type="button" data-open-inquiry="contact">Message our team</button></aside>
+
+		<div class="modal-backdrop" data-auth-modal hidden><section class="account-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title"><button class="modal-close" type="button" aria-label="Close dialog" data-auth-close>×</button><p class="eyebrow">Opal Stars Management</p><h2 id="auth-title" data-auth-title>Welcome back</h2><p data-auth-description>Sign in to manage your celebrity booking account.</p><form data-auth-form><label data-auth-name-field hidden>Full name<input type="text" name="fullName" autocomplete="name" minlength="2" maxlength="100"></label><label>Email address<input type="email" name="email" autocomplete="email" required></label><label>Password<input type="password" name="password" autocomplete="current-password" minlength="10" maxlength="128" required></label><button class="button button-blue" type="submit" data-auth-submit>Sign In</button><p class="form-status" data-auth-status aria-live="polite"></p></form></section></div>
+		<div class="modal-backdrop" data-inquiry-modal hidden><section class="account-modal" role="dialog" aria-modal="true" aria-labelledby="inquiry-title"><button class="modal-close" type="button" aria-label="Close inquiry" data-inquiry-close>×</button><p class="eyebrow">Opal Stars Management</p><h2 id="inquiry-title">Request a celebrity booking</h2><p>Tell us what you are planning. An email address is optional for booking requests.</p><form data-inquiry-form><input type="hidden" name="type" value="booking"><label>Your name<input name="fullName" autocomplete="name" required minlength="2" maxlength="100"></label><label data-inquiry-email-label>Email address (optional)<input type="email" name="email" autocomplete="email"></label><label>Celebrity<input name="celebrity" readonly></label><label>Your request<textarea name="message" rows="4" required minlength="10" maxlength="3000" placeholder="Share your event date, location, and what you have in mind."></textarea></label><button class="button button-blue" type="submit">Send inquiry</button><p class="form-status" data-inquiry-status aria-live="polite"></p></form></section></div>
+	</body>
+</html>

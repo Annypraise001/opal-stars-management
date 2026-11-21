@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f7f9fc">
+		<meta name="description" content="Support a celebrity's chosen cause through Opal Stars Management.">
+		<title>Donate | Opal Stars Management</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="donate.js" defer></script>
+	</head>
+	<body class="booking-page payment-page donation-page">
+		<header class="site-header">
+			<a class="brand" href="/" aria-label="Opal Stars Management home"><span class="brand-mark" aria-hidden="true">O<span>✦</span></span><span class="brand-name">OPAL STARS<small>MANAGEMENT</small></span></a>
+			<nav class="desktop-nav" aria-label="Main navigation"><a href="/#home">Home</a><a href="/#partners">About Us</a><a href="/book">Brands</a><a href="/book">Book Now</a></nav>
+			<div class="header-actions"><a class="header-link" href="/book">Book Now</a><button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/></svg></button><button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" data-menu-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+			<nav class="mobile-menu" aria-label="Mobile navigation" hidden><a href="/">Home</a><a href="/book">Book Now</a><a href="/#contact">Contact</a></nav>
+		</header>
+		<main>
+			<section class="booking-profile-hero donate-hero" aria-labelledby="donate-title">
+				<div class="booking-profile-inner">
+					<img class="profile-portrait" data-celebrity-image alt="" hidden>
+					<span class="profile-badge">☆ FEATURED</span>
+					<h1 id="donate-title">Donate with <span data-celebrity-name>Celebrity</span></h1>
+					<p class="profile-subtitle">Support <span data-celebrity-name>this celebrity</span>'s chosen charity or cause</p>
+					<div class="profile-meta"><span class="profile-chip">⌖ <span data-celebrity-country>Loading</span></span><span class="profile-chip">♧ <span data-celebrity-role></span></span><span class="profile-chip">★ 4.9 (120 reviews)</span></div>
+					<p class="profile-description">Your donation will be directed to the selected cause through Opal Stars Management, the payment recipient and celebrity management company. A confirmation will be provided after payment review.</p>
+					<p class="profile-fee">Suggested donation: <strong>$50–$500</strong></p>
+				</div>
+			</section>
+			<section class="booking-workspace donation-workspace" aria-labelledby="donation-form-heading">
+				<form class="booking-form donation-form" data-donation-form>
+					<input type="hidden" name="celebrityId">
+					<header class="booking-form-header">
+						<div class="booking-form-title"><span class="booking-form-icon" aria-hidden="true">♡</span><div><h2 id="donation-form-heading">Make a Donation with <span data-form-celebrity>Celebrity</span></h2><p>Support a selected charitable cause</p></div></div>
+						<span class="booking-type-badge charity-badge">♡ &nbsp; Charity Donation</span>
+						<div class="booking-step-tabs donation-step-tabs" role="tablist" aria-label="Donation steps"><button type="button" class="booking-step-tab is-active" data-donation-tab="1" aria-selected="true">♡ Donation Details</button><button type="button" class="booking-step-tab" data-donation-tab="2" aria-selected="false">♧ Charity Info</button><button type="button" class="booking-step-tab" data-donation-tab="3" aria-selected="false">▤ Payment</button></div>
+					</header>
+					<section class="booking-step-panel" data-donation-panel="1">
+						<div class="donation-callout"><h3>♡ &nbsp; Make a Meaningful Donation</h3><p>Your contribution supports causes selected for <span data-callout-celebrity>this celebrity</span>. Opal Stars Management receives and processes the payment for the selected cause.</p></div>
+						<div class="donation-fields">
+							<fieldset class="amount-field"><legend>Donation Amount <span>*</span></legend><div class="donation-presets"><button type="button" data-amount="50">$50</button><button type="button" data-amount="100">$100</button><button type="button" data-amount="250">$250</button><button type="button" data-amount="500">$500</button></div><label class="visually-hidden" for="donation-amount">Custom donation amount</label><input id="donation-amount" name="amount" type="number" min="1" max="1000000" step="0.01" required placeholder="Enter custom amount"></fieldset>
+							<label>Personal Message (Optional)<textarea name="personalMessage" rows="4" maxlength="1000" placeholder="Share why you're making this donation or a message for the celebrity..."></textarea></label>
+							<label>Full Name <span>*</span><input name="fullName" required minlength="2" maxlength="100" autocomplete="name"></label>
+							<label>Email <span>*</span><input name="email" type="email" required maxlength="254" autocomplete="email"></label>
+						</div>
+						<p class="booking-validation" data-donation-error role="alert" hidden></p>
+						<div class="booking-form-actions booking-form-actions-end"><span></span><button class="button button-gold" type="button" data-donation-next="2">Next: Charity Info <span aria-hidden="true">→</span></button></div>
+					</section>
+					<section class="booking-step-panel" data-donation-panel="2" hidden>
+						<div class="charity-list"><h3><span data-form-celebrity>Celebrity</span>'s Supported Charities</h3><label class="charity-option"><input type="radio" name="charity" value="Children's Education Foundation" required><span><strong>Children's Education Foundation</strong><small>Supporting education for underprivileged children worldwide</small></span></label><label class="charity-option"><input type="radio" name="charity" value="Environmental Conservation"><span><strong>Environmental Conservation</strong><small>Climate change and environmental protection initiatives</small></span></label><label class="charity-option"><input type="radio" name="charity" value="Healthcare Access"><span><strong>Healthcare Access</strong><small>Providing medical care to communities in need</small></span></label></div>
+						<p class="booking-validation" data-charity-error role="alert" hidden></p>
+						<div class="booking-form-actions"><button class="button button-back" type="button" data-donation-previous="1">← &nbsp; Back: Details</button><button class="button button-gold" type="button" data-donation-next="3">Next: Complete <span aria-hidden="true">→</span></button></div>
+					</section>
+					<section class="booking-step-panel" data-donation-panel="3" hidden>
+						<section class="booking-summary donation-summary"><h3>♡ &nbsp; Donation Summary</h3><dl><div><dt>Celebrity:</dt><dd data-summary-celebrity>Loading</dd></div><div><dt>Recipient:</dt><dd>Opal Stars Management</dd></div><div><dt>Donation Amount:</dt><dd data-summary-amount>$0.00</dd></div><div><dt>Processing Fee (<span data-processing-rate>3%</span>):</dt><dd data-summary-fee>$0.00</dd></div><div class="summary-total"><dt>Total Amount:</dt><dd data-summary-total>$0.00</dd></div></dl></section>
+						<section class="payment-method-section"><h3>▤ &nbsp; Select Payment Method</h3><label class="visually-hidden" for="donation-payment-method">Payment method</label><select id="donation-payment-method" name="paymentMethod" required><option value="">Choose a payment method...</option></select><p class="payment-unavailable" data-payment-config-message role="status" hidden></p></section>
+						<section class="payment-details" data-payment-details><div class="payment-default-qr" data-payment-default-qr><h3>▦ &nbsp; Bitcoin QR Code</h3><p>Scan this code to pay with Bitcoin, or choose another payment method above.</p><img data-default-payment-qr alt="Bitcoin wallet QR code"></div><div data-payment-selected-details hidden><h3>▣ &nbsp; Payment Details</h3><div class="payment-instructions"><h4>ⓘ &nbsp; Payment Instructions</h4><ol><li>Send the exact total shown above to Opal Stars Management using the selected payment method.</li><li>Upload a screenshot or receipt of your transaction as proof.</li><li>Submit the form and wait for confirmation from our team.</li></ol></div><p class="payment-network" data-payment-network hidden></p><div class="payment-qr-block" data-payment-qr-block hidden><h4>▦ &nbsp; QR Code Payment</h4><img data-payment-qr alt="Payment QR code" hidden></div><div class="payment-address-block" data-payment-address-block hidden><label for="donation-payment-address"><span data-address-label>Payment</span> address</label><div class="payment-address-control"><input id="donation-payment-address" readonly><button type="button" class="button button-copy" data-copy-address>Copy</button></div></div><div class="bank-details-block" data-bank-details hidden><h4>Bank Transfer Details</h4><dl data-bank-values></dl></div><label class="proof-upload">Upload Payment Proof <span>*</span><span class="proof-dropzone"><span class="upload-icon" aria-hidden="true">⇧</span><strong>Choose file</strong> or drag and drop<small>PNG, JPG, GIF, or PDF up to 10MB</small><input type="file" name="paymentProof" accept="image/png,image/jpeg,image/gif,application/pdf" data-proof-input></span></label></div></section>
+						<p class="booking-validation" data-payment-error role="alert" hidden></p>
+						<label class="terms-agreement"><input type="checkbox" name="acceptedTerms" value="true" required><span>I agree to the <a href="/#terms">Terms and Conditions</a> and <a href="/#donation-policy">Donation Policy</a>. Payment is received by Opal Stars Management.</span></label>
+						<div class="booking-form-actions"><button class="button button-back" type="button" data-donation-previous="2">← &nbsp; Back</button><button class="button button-gold donation-submit" type="submit" data-donation-submit>♡ &nbsp; Process Donation</button></div>
+					</section>
+					<p class="booking-submit-status" data-donation-status aria-live="polite"></p>
+				</form>
+				<aside class="booking-faq" aria-labelledby="donation-faq-title"><h2 id="donation-faq-title">ⓘ &nbsp; Frequently Asked Questions</h2><details><summary>What happens after I donate?</summary><p>Your donation and payment proof are saved for review. Opal Stars Management will confirm receipt and direct the contribution to the selected cause.</p></details><details><summary>How is my donation processed?</summary><p>Payments are received by Opal Stars Management and reviewed with the submitted proof before confirmation.</p></details><details><summary>Can I change my donation details after submitting?</summary><p>Contact our support team promptly. Changes depend on the payment review status.</p></details></aside>
+				<aside class="booking-support"><span class="service-icon" aria-hidden="true">♧</span><h2>Need Help with Your Donation?</h2><p>Our support team is available to assist with donation questions.</p><div><a class="button button-blue" href="mailto:info@opalstarsmanagement.com">☏ &nbsp; Chat with Support</a><a class="button button-secondary" href="tel:+18606346879">☎ &nbsp; Call Us</a></div></aside>
+			</section>
+		</main>
+		<footer class="site-footer"><div class="footer-main"><div class="footer-about"><a class="brand brand-inverted" href="/" aria-label="Opal Stars Management home"><span class="brand-mark" aria-hidden="true">O<span>✦</span></span><span class="brand-name">OPAL STARS<small>MANAGEMENT</small></span></a><h2>Opal Stars Management</h2><p>Payments for bookings and donations are received by Opal Stars Management.</p></div><nav class="footer-links" aria-label="Footer navigation"><h3>Quick Links</h3><a href="/">Home</a><a href="/book">Book Now</a><a href="/#terms">Terms &amp; Conditions</a><a href="/#privacy">Privacy Policy</a></nav><div class="newsletter"><h3>Support</h3><p>Questions about a donation?</p><a href="mailto:info@opalstarsmanagement.com">Contact Opal Stars Management</a></div></div><div class="footer-bottom"><p>© 2026 <strong>Opal Stars Management.</strong> All rights reserved.</p></div></footer>
+		<div class="utility-dock" aria-label="Quick tools"><button class="language-button" type="button" aria-label="Choose language"><span class="flag" aria-hidden="true">🇬🇧</span><span>EN</span><span aria-hidden="true">⌃</span></button><a class="utility-action" href="#donation-form-heading" aria-label="Back to donation form"><svg class="top-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></a></div>
+	</body>
+</html>

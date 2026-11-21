@@ -1,0 +1,217 @@
+<a class="button button-small button-gold" href="/donate?celebrity=ronan-keating" data-open-inquiry="donation" data-celebrity-id="ronan-keating" data-celebrity="Ronan Keating">♡ Donate</a>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f7f9fc">
+		<meta name="description" content="Book memorable experiences with the stars you love through Opal Stars Management.">
+		<title>Opal Stars Management | Book Your Favorite Celebrity</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="brand" href="#home" aria-label="Opal Stars Management home">
+				<span class="brand-mark" aria-hidden="true">O<span>✦</span></span>
+				<span class="brand-name">OPAL STARS<small>MANAGEMENT</small></span>
+			</a>
+			<nav class="desktop-nav" aria-label="Main navigation">
+				<a href="#home">Home</a>
+				<a href="#partners">About Us</a>
+				<a href="#services">Services</a>
+				<a href="#categories">Brands</a>
+				<a href="#contact">Contact</a>
+			</nav>
+			<div class="header-actions">
+				<a class="header-link" href="#signin" data-open-modal="signin">Login</a>
+				<a class="header-link" href="#register" data-open-modal="register">Register</a>
+				<button class="header-link" type="button" data-logout hidden>Log out</button>
+				<button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle>
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/></svg>
+				</button>
+				<button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+				</button>
+			</div>
+			<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+				<a href="#home">Home</a>
+				<a href="#partners">About Us</a>
+				<a href="#services">Services</a>
+				<a href="#categories">Brands</a>
+				<a href="#contact">Contact</a>
+				<a href="/book">Book Now</a>
+				<div class="mobile-menu-actions">
+					<a class="button button-secondary" href="#signin" data-open-modal="signin">Login</a>
+					<a class="button button-primary" href="#register" data-open-modal="register">Register</a>
+					<button class="button button-secondary" type="button" data-logout hidden>Log out</button>
+					<button class="button button-quiet" type="button" data-theme-toggle>Switch theme</button>
+				</div>
+			</nav>
+		</header>
+
+		<main id="home">
+			<section class="hero section section-dark" aria-labelledby="hero-title">
+				<div class="hero-content">
+					<p class="eyebrow eyebrow-glass"><span aria-hidden="true">✦</span> Welcome to Opal Stars Management</p>
+					<h1 id="hero-title">Book Your <span class="text-gradient">Favorite</span> Celebrity</h1>
+					<p class="hero-copy">Connect with the stars you love. Get exclusive access to meet &amp; greets, VIP experiences, and unforgettable moments.</p>
+					<form class="hero-search" role="search" data-search-form>
+						<label class="visually-hidden" for="celebrity-search">Search celebrities</label>
+						<input id="celebrity-search" name="q" type="search" placeholder="Search your favorite celebrity" autocomplete="off">
+						<button type="submit" aria-label="Search celebrities">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+						</button>
+					</form>
+					<div class="hero-actions">
+						<a class="button button-gold" href="/book"><span aria-hidden="true">☆</span> Book Celebrity Now <span aria-hidden="true">→</span></a>
+						<a class="button button-blue section-cta" href="/book">View All Celebrities <span aria-hidden="true">→</span></a>
+						<a class="button button-outline-light" href="#categories"><span aria-hidden="true">▦</span> Browse Categories</a>
+					</div>
+					<div class="stats-grid" aria-label="Opal Stars at a glance">
+						<div class="stat"><strong>50+</strong><span>Celebrity Events</span></div>
+						<div class="stat"><strong>100K+</strong><span>Happy Clients</span></div>
+						<div class="stat"><strong>10+</strong><span>Years Experience</span></div>
+						<div class="stat"><strong>24/7</strong><span>Client Support</span></div>
+					</div>
+				</div>
+				<div class="hero-art" aria-hidden="true">
+					<div class="hero-photo hero-photo-one"></div>
+					<div class="hero-photo hero-photo-two"></div>
+					<span class="hero-orbit"></span>
+					<p class="hero-note"><strong>Make it</strong><br>unforgettable.</p>
+				</div>
+			</section>
+
+			<section class="section featured-section" id="featured" aria-labelledby="featured-title">
+				<div class="section-heading">
+					<p class="eyebrow"><span aria-hidden="true">☆</span> Featured Celebrities</p>
+					<h2 id="featured-title">Meet Our <span class="text-gradient">Top Stars</span></h2>
+					<p>Discover our most requested talent. Book directly or explore the full catalog.</p>
+				</div>
+				<div class="celebrity-grid" data-celebrity-grid>
+					<article class="celebrity-card" data-name="Ronan Keating" data-category="music">
+						<div class="celebrity-image"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Portrait of a male performer" loading="lazy"><span class="featured-tag">Featured</span></div>
+						<div class="celebrity-details"><div class="celebrity-title"><h3>Ronan Keating</h3><span class="rating"><span aria-hidden="true">★</span> 4.9</span></div><p class="meta-row">⌖ <span>Ireland</span></p><p class="price-row">◇ <span>$500,000</span></p><div class="card-actions"><a class="button button-small button-blue" href="/booking?celebrity=ronan-keating" data-open-inquiry="booking" data-celebrity-id="ronan-keating" data-celebrity="Ronan Keating">▣ Book Now</a><a class="button button-small button-gold" href="#contact" data-open-inquiry="donation" data-celebrity="Ronan Keating">♡ Donate</a><a class="button button-small button-card-outline" href="#contact" data-open-inquiry="fan_card" data-celebrity="Ronan Keating">▤ Fan Card</a></div></div>
+					</article>
+					<article class="celebrity-card" data-name="Sam Heughan" data-category="acting">
+						<div class="celebrity-image"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Portrait of a male actor" loading="lazy"><span class="featured-tag">Featured</span></div>
+						<div class="celebrity-details"><div class="celebrity-title"><h3>Sam Heughan</h3><span class="rating"><span aria-hidden="true">★</span> 4.9</span></div><p class="meta-row">⌖ <span>United States</span></p><p class="price-row">◇ <span>$750,000</span></p><div class="card-actions"><a class="button button-small button-blue" href="/booking?celebrity=sam-heughan" data-open-inquiry="booking" data-celebrity-id="sam-heughan" data-celebrity="Sam Heughan">▣ Book Now</a><a class="button button-small button-gold" href="#contact" data-open-inquiry="donation" data-celebrity="Sam Heughan">♡ Donate</a><a class="button button-small button-card-outline" href="#contact" data-open-inquiry="fan_card" data-celebrity="Sam Heughan">▤ Fan Card</a></div></div>
+					</article>
+					<article class="celebrity-card" data-name="Ariana Grande" data-category="music">
+						<div class="celebrity-image"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Portrait of a female singer" loading="lazy"><span class="featured-tag">Featured</span></div>
+						<div class="celebrity-details"><div class="celebrity-title"><h3>Ariana Grande</h3><span class="rating"><span aria-hidden="true">★</span> 4.9</span></div><p class="meta-row">⌖ <span>United States</span></p><p class="price-row">◇ <span>$300,000</span></p><div class="card-actions"><a class="button button-small button-blue" href="/booking?celebrity=ariana-grande" data-open-inquiry="booking" data-celebrity-id="ariana-grande" data-celebrity="Ariana Grande">▣ Book Now</a><a class="button button-small button-gold" href="#contact" data-open-inquiry="donation" data-celebrity="Ariana Grande">♡ Donate</a><a class="button button-small button-card-outline" href="#contact" data-open-inquiry="fan_card" data-celebrity="Ariana Grande">▤ Fan Card</a></div></div>
+					</article>
+					<article class="celebrity-card" data-name="Chris Hemsworth" data-category="acting">
+						<div class="celebrity-image"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Portrait of a male performer" loading="lazy"><span class="featured-tag">Featured</span></div>
+						<div class="celebrity-details"><div class="celebrity-title"><h3>Chris Hemsworth</h3><span class="rating"><span aria-hidden="true">★</span> 4.9</span></div><p class="meta-row">⌖ <span>Australia</span></p><p class="price-row">◇ <span>$350,000</span></p><div class="card-actions"><a class="button button-small button-blue" href="/booking?celebrity=chris-hemsworth" data-open-inquiry="booking" data-celebrity-id="chris-hemsworth" data-celebrity="Chris Hemsworth">▣ Book Now</a><a class="button button-small button-gold" href="#contact" data-open-inquiry="donation" data-celebrity="Chris Hemsworth">♡ Donate</a><a class="button button-small button-card-outline" href="#contact" data-open-inquiry="fan_card" data-celebrity="Chris Hemsworth">▤ Fan Card</a></div></div>
+					</article>
+				</div>
+				<p class="empty-state" data-empty-state hidden>No celebrities match that search. Try another name.</p>
+				<a class="button button-blue section-cta" href="#categories">View All Celebrities <span aria-hidden="true">→</span></a>
+			</section>
+
+			<section class="section categories-section" id="categories" aria-labelledby="categories-title">
+				<div class="section-heading">
+					<p class="eyebrow"><span aria-hidden="true">▦</span> Find your moment</p>
+					<h2 id="categories-title">Browse Celebrity <span class="text-gradient">Categories</span></h2>
+					<p>Explore remarkable talent from across entertainment, sport, and culture.</p>
+				</div>
+				<div class="category-grid">
+					<a class="category-card category-actors" href="#featured"><span class="category-count">200+ Celebs</span><h3>Actors &amp; Actresses</h3></a>
+					<a class="category-card category-musicians" href="#featured"><span class="category-count">180+ Celebs</span><h3>Musicians &amp; Artists</h3></a>
+					<a class="category-card category-sports" href="#featured"><span class="category-count">150+ Celebs</span><h3>Sports Stars</h3></a>
+					<a class="category-card category-creators" href="#featured"><span class="category-count">250+ Celebs</span><h3>Digital Creators</h3></a>
+				</div>
+				<a class="button button-blue section-cta" href="#featured">☷ &nbsp; View All Categories</a>
+			</section>
+
+			<section class="section services-section" id="services" aria-labelledby="services-title">
+				<div class="section-heading">
+					<p class="eyebrow"><span aria-hidden="true">✧</span> Our Services</p>
+					<h2 id="services-title">Special <span class="text-gradient">Experiences</span> For You</h2>
+					<p>Thoughtful ways to connect with the people who inspire you.</p>
+				</div>
+				<div class="service-grid">
+					<article class="service-item"><span class="service-icon">▣</span><h3>Online Celebrity Bookings</h3><p>Book talent for your event with a clear, supported booking process.</p></article>
+					<article class="service-item"><span class="service-icon">♧</span><h3>Meet &amp; Greet</h3><p>Meet your favorite celebrities through exclusive in-person experiences.</p></article>
+					<article class="service-item"><span class="service-icon">▤</span><h3>Fan Membership Card</h3><p>Unlock member benefits, event access, and special offers.</p></article>
+					<article class="service-item"><span class="service-icon">▻</span><h3>Personal Video Messages</h3><p>Celebrate a special occasion with a personal message from a star.</p></article>
+				</div>
+				<div class="custom-experience" id="contact"><div><p class="eyebrow eyebrow-glass">Made around your event</p><h2>Need a custom celebrity experience?</h2><p>Tell us what you are planning. Our team can help create a memorable event tailored to you.</p><a class="button button-white" href="#contact" data-open-inquiry="contact">✧ &nbsp; Request a Consultation</a></div><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Guests gathered at an elegant event" loading="lazy"></div>
+			</section>
+
+			<section class="gallery-section" aria-labelledby="gallery-title">
+				<div class="gallery-backdrop"></div>
+				<div class="gallery-content">
+					<p class="eyebrow eyebrow-glass">▧ &nbsp; Gallery</p>
+					<h2 id="gallery-title">Opal Stars Management Gallery</h2>
+					<p>Explore highlights from celebrity events, meet &amp; greets, and live appearances.</p>
+					<div class="gallery-filters" role="group" aria-label="Filter gallery" data-gallery-filters>
+						<button class="filter-pill is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+						<button class="filter-pill" type="button" data-filter="events" aria-pressed="false">Events</button>
+						<button class="filter-pill" type="button" data-filter="meet" aria-pressed="false">Meet &amp; Greet</button>
+						<button class="filter-pill" type="button" data-filter="shows" aria-pressed="false">Shows</button>
+					</div>
+					<div class="gallery-preview" data-gallery-items>
+						<img data-gallery-category="events" src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Crowd enjoying a live event" loading="lazy">
+						<img data-gallery-category="meet" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Guests at a celebration" loading="lazy">
+						<img data-gallery-category="shows" src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Live music show" loading="lazy">
+					</div>
+				</div>
+			</section>
+
+			<section class="section partners-section" id="partners" aria-labelledby="partners-title">
+				<div class="section-heading">
+					<p class="eyebrow">Our Partners</p>
+					<h2 id="partners-title">Entertainment, <span class="text-gradient">Together</span></h2>
+					<p>We work with trusted names across entertainment to make great experiences possible.</p>
+				</div>
+				<div class="partner-grid" aria-label="Selected partners"><span>WARNER BROS.</span><span>Walt Disney</span><span>GAUMONT</span><span>FOX SEARCHLIGHT</span><span>PARAMOUNT</span><span class="partner-netflix">NETFLIX</span></div>
+			</section>
+
+			<section class="section testimonials-section" aria-labelledby="testimonials-title">
+				<div class="section-heading">
+					<p class="eyebrow">Testimonials</p>
+					<h2 id="testimonials-title">What Our Clients <span class="text-gradient">Say</span></h2>
+					<p>Stories from people who have made a little more room for unforgettable moments.</p>
+				</div>
+				<div class="testimonial-grid">
+					<article class="testimonial"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“The team made the whole experience feel personal, clear, and genuinely special.”</blockquote><p><strong>James</strong><span>Event Organizer</span></p></article>
+					<article class="testimonial"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“I have used the platform more than once. It is easy to navigate and the support is excellent.”</blockquote><p><strong>Mirabel</strong><span>Repeat Customer</span></p></article>
+					<article class="testimonial"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“A memorable day for our family, handled with care from the first message to the event.”</blockquote><p><strong>Felix</strong><span>Verified Client</span></p></article>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-main">
+				<div class="footer-about"><a class="brand brand-inverted" href="#home" aria-label="Opal Stars Management home"><span class="brand-mark" aria-hidden="true">O<span>✦</span></span><span class="brand-name">OPAL STARS<small>MANAGEMENT</small></span></a><h2>Opal Stars Management</h2><p>Connect with your favorite celebrities. Book meet &amp; greets, get VIP access, and create unforgettable memories.</p><address><a href="tel:+18606346879">⌕ &nbsp; +1 (860) 634-6879</a><a href="mailto:info@opalstarsmanagement.com">✉ &nbsp; info@opalstarsmanagement.com</a></address></div>
+				<nav class="footer-links" aria-label="Footer navigation"><h3>Quick Links</h3><a href="#home">Home</a><a href="#partners">About Us</a><a href="#services">Services</a><a href="#categories">Brands</a><a href="#contact">Contact</a><a href="#featured">Book Now</a></nav>
+				<nav class="footer-links" aria-label="Footer navigation"><h3>Quick Links</h3><a href="#home">Home</a><a href="#partners">About Us</a><a href="#services">Services</a><a href="#categories">Brands</a><a href="#contact">Contact</a><a href="/book">Book Now</a></nav>
+				<form class="newsletter" data-newsletter-form><h3>Stay Updated</h3><p>Get celebrity news and occasional offers in your inbox.</p><label class="visually-hidden" for="newsletter-email">Email address</label><div class="newsletter-control"><input id="newsletter-email" name="email" type="email" placeholder="Your email address" required><button class="button button-blue" type="submit">✉ &nbsp; Subscribe</button></div><p class="form-status" data-newsletter-status aria-live="polite"></p></form>
+			</div>
+			<div class="footer-bottom"><p>© 2026 <strong>Opal Stars Management.</strong> All rights reserved.</p><nav aria-label="Legal links"><a href="#terms">Terms &amp; Conditions</a><a href="#privacy">Privacy Policy</a><a href="#accessibility">Accessibility</a></nav><div class="social-links" aria-label="Social media"><a href="#instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" class="fill-dot"/></svg></a><a href="#facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h1.7V1.4c-.8-.1-1.8-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h2.7v8z"/></svg></a><a href="#x" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h4.5l11.5 18h-4.5L4 3Zm1.8 0 12.4 18M20 3 5 21"/></svg></a><a href="#youtube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" class="icon-cutout"/></svg></a></div></div>
+		</footer>
+
+		<div class="utility-dock" aria-label="Quick tools">
+			<button class="language-button" type="button" aria-label="Choose language" aria-expanded="false" data-language-toggle><span class="flag" aria-hidden="true">🇬🇧</span><span data-language-label>EN</span><span aria-hidden="true">⌃</span></button>
+			<div class="language-menu" data-language-menu hidden><button type="button" data-language="EN">🇬🇧 English</button><button type="button" data-language="ES">🇪🇸 Español</button><button type="button" data-language="FR">🇫🇷 Français</button></div>
+			<button class="utility-action" type="button" aria-label="Open chat" data-utility-action>
+				<svg class="chat-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.7 8.7 0 0 1-3.6-.8L4 20l1.2-3.7A7.2 7.2 0 0 1 4 12c0-4.1 3.6-7.5 8-7.5s8 3.1 8 7Z"/></svg>
+				<svg class="top-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg>
+			</button>
+		</div>
+		<aside class="chat-panel" data-chat-panel hidden aria-label="Chat with Opal Stars"><button type="button" class="chat-close" aria-label="Close chat" data-chat-close>×</button><h2>How can we help?</h2><p>Our booking team is here to help you plan a great experience.</p><button class="button button-blue" type="button" data-open-inquiry="contact">Message our team</button></aside>
+
+		<div class="modal-backdrop" data-modal hidden>
+			<section class="account-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" type="button" aria-label="Close dialog" data-modal-close>×</button><p class="eyebrow">Opal Stars Management</p><h2 id="modal-title" data-modal-title>Welcome back</h2><p data-modal-description>Sign in to manage your celebrity booking account.</p><form data-account-form><label data-register-only hidden>Full name<input type="text" name="fullName" autocomplete="name" minlength="2" maxlength="100"></label><label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label><label>Password<input type="password" name="password" placeholder="Your password" autocomplete="current-password" required minlength="10" maxlength="128"></label><button class="button button-blue" type="submit" data-modal-submit>Sign In</button><p class="form-status" data-account-status aria-live="polite"></p></form></section>
+		</div>
+		<div class="modal-backdrop" data-inquiry-modal hidden>
+			<section class="account-modal" role="dialog" aria-modal="true" aria-labelledby="inquiry-title"><button class="modal-close" type="button" aria-label="Close inquiry" data-inquiry-close>×</button><p class="eyebrow">Opal Stars Management</p><h2 id="inquiry-title">Send an inquiry</h2><p data-inquiry-description>Tell us a little about what you need and our team will follow up.</p><form data-inquiry-form><input type="hidden" name="type" value="booking"><label>Your name<input name="fullName" autocomplete="name" required minlength="2" maxlength="100"></label><label>Email address<input type="email" name="email" autocomplete="email" required></label><label>Celebrity (optional)<input name="celebrity" maxlength="100"></label><label>Your request<textarea name="message" rows="4" required minlength="10" maxlength="3000" placeholder="Share your event date, location, and what you have in mind."></textarea></label><button class="button button-blue" type="submit" data-inquiry-submit>Send inquiry</button><p class="form-status" data-inquiry-status aria-live="polite"></p></form></section>
+		</div>
+	</body>
+</html>
