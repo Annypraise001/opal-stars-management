@@ -195,6 +195,12 @@ app.use('/api', apiLimiter, (req, res, next) => {
 	}
 	next();
 });
+app.use('/style.css', (_req, res, next) => {
+	res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+	res.set('Pragma', 'no-cache');
+	res.set('Expires', '0');
+	next();
+});
 
 const paymentMethods = [
 	{ id: 'bitcoin', label: 'Bitcoin', addressKey: 'BITCOIN_ADDRESS', qrScheme: 'bitcoin:' },
@@ -232,7 +238,20 @@ function getBankConfiguration() {
 	return { configured: required.every((key) => details[key]), details };
 }
 
+let publicPaymentConfigurationPromise = null;
+
 async function getPublicPaymentConfiguration() {
+	if (publicPaymentConfigurationPromise) return publicPaymentConfigurationPromise;
+	publicPaymentConfigurationPromise = buildPublicPaymentConfiguration();
+	try {
+		return await publicPaymentConfigurationPromise;
+	} catch (error) {
+		publicPaymentConfigurationPromise = null;
+		throw error;
+	}
+}
+
+async function buildPublicPaymentConfiguration() {
 	const feePercent = parseServiceFeePercent();
 	const feeConfigured = feePercent !== null;
 	const methods = await Promise.all(paymentMethods.map(async (method) => {
@@ -357,6 +376,7 @@ app.get('/api/celebrities/:id', (req, res) => {
 
 app.get('/api/payment-config', async (_req, res, next) => {
 	try {
+		res.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=3600');
 		res.json(await getPublicPaymentConfiguration());
 	} catch (error) {
 		next(error);

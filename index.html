@@ -10,7 +10,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css?v=20261122-mobile-header">
 		<script src="main.js" defer></script>
 	</head>
 	<body>
@@ -59,13 +59,10 @@
 					<p class="eyebrow eyebrow-glass"><span aria-hidden="true">✦</span> Welcome to Opal Stars Management</p>
 					<h1 id="hero-title">Book Your <span class="text-gradient">Favorite</span> Celebrity</h1>
 					<p class="hero-copy">Connect with the stars you love. Get exclusive access to meet &amp; greets, VIP experiences, and unforgettable moments.</p>
-					<form class="hero-search" role="search" data-search-form>
-						<label class="visually-hidden" for="celebrity-search">Search celebrities</label>
-						<input id="celebrity-search" name="q" type="search" placeholder="Search your favorite celebrity" autocomplete="off">
-						<button type="submit" aria-label="Search celebrities">
-							<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
-						</button>
-					</form>
+					<div class="hero-mobile-art" aria-hidden="true">
+						<div class="hero-mobile-photo hero-mobile-photo-one"></div>
+						<div class="hero-mobile-photo hero-mobile-photo-two"></div>
+					</div>
 					<div class="hero-actions">
 						<a class="button button-gold" href="/book"><span aria-hidden="true">☆</span> Book Celebrity Now <span aria-hidden="true">→</span></a>
 						<a class="button button-blue section-cta" href="/book">View All Celebrities <span aria-hidden="true">→</span></a>
@@ -85,6 +82,14 @@
 					<p class="hero-note"><strong>Make it</strong><br>unforgettable.</p>
 				</div>
 			</section>
+
+			<form class="hero-search" role="search" data-search-form>
+						<label class="visually-hidden" for="celebrity-search">Search celebrities</label>
+						<input id="celebrity-search" name="q" type="search" placeholder="Search your favorite celebrity" autocomplete="off">
+						<button type="submit" aria-label="Search celebrities">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+						</button>
+					</form>
 
 			<section class="section featured-section" id="featured" aria-labelledby="featured-title">
 				<div class="section-heading">

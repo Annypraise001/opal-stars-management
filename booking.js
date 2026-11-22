@@ -178,6 +178,10 @@ function renderPaymentConfiguration(configuration) {
 		: 'Payment is not configured yet. You can submit a booking request without payment; no payment details are displayed or collected.';
 	paymentConfigMessage.hidden = !paymentConfigMessage.textContent;
 	updateSummary();
+	const defaultAddress = bitcoin?.address ?? '';
+	const defaultAccount = document.querySelector('[data-default-payment-address]');
+	defaultAccount.textContent = defaultAddress ? `Bitcoin address: ${defaultAddress}` : '';
+	defaultAccount.hidden = !defaultAddress;
 }
 
 paymentSelect.addEventListener('change', () => {
@@ -254,8 +258,10 @@ async function loadCelebrity() {
 
 async function initialize() {
 	try {
-		await loadCelebrity();
-		const configuration = await apiRequest('/api/payment-config');
+		const [celebrityResult, configuration] = await Promise.all([
+			loadCelebrity(),
+			apiRequest('/api/payment-config'),
+		]);
 		renderPaymentConfiguration(configuration);
 	} catch (error) {
 		bookingStatus.textContent = error.message;

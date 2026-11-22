@@ -116,6 +116,10 @@ function renderPaymentConfiguration(configuration) {
 	const defaultQr = document.querySelector('[data-default-payment-qr]');
 	defaultQr.src = bitcoin?.qrDataUrl ?? '';
 	defaultQr.hidden = !bitcoin?.qrDataUrl;
+	const defaultAddress = bitcoin?.address ?? '';
+	const defaultAccount = document.querySelector('[data-default-payment-address]');
+	defaultAccount.textContent = defaultAddress ? `Bitcoin address: ${defaultAddress}` : '';
+	defaultAccount.hidden = !defaultAddress;
 	paymentSelect.replaceChildren(new Option('Choose a payment method...', ''));
 	const unavailable = [];
 	for (const method of configuration.methods) {
