@@ -268,7 +268,6 @@ body.theme-dark .newsletter-control input, body.theme-dark .account-modal input,
 	.hero-art { display: none; }
 }
 @media (max-width: 700px) {
-	.header-actions .menu-toggle { display: none; }
 	.header-actions { gap: 7px; }
 	.header-actions .header-link { font-size: 12px; }
 	.brand-name { font-size: 13px; }
