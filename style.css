@@ -240,6 +240,8 @@ body.theme-dark .newsletter-control input, body.theme-dark .account-modal input,
 	.hero-actions .button { width: 100%; }
 	.stats-grid { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.hero-art { display: none; }
+	.language-menu { bottom: 58px; left: 0; width: min(320px, calc(100vw - 36px)); max-height: min(520px, 62vh); overflow-y: auto; overscroll-behavior: contain; }
+	.language-menu button { min-height: 54px; display: flex; align-items: center; gap: 12px; font-size: 16px; }
 }
 @media (max-width: 380px) {
 	:root { --page-gutter: 18px; }
@@ -269,3 +271,6 @@ body.theme-dark .newsletter-control input, body.theme-dark .account-modal input,
 	.brand-name { font-size: 13px; }
 	.brand-name small { font-size: 8px; }
 }
+
+.goog-te-banner-frame, .goog-te-menu-frame, .goog-te-gadget { display: none !important; }
+body { top: 0 !important; }

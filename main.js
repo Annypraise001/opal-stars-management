@@ -114,11 +114,21 @@ languageToggle?.addEventListener('click', () => {
 });
 languageMenu?.querySelectorAll('[data-language]').forEach((option) => {
 	option.addEventListener('click', () => {
-		document.querySelector('[data-language-label]').textContent = option.dataset.language;
+		const language = option.dataset.language;
+		const flag = option.dataset.flag;
+		document.querySelector('[data-language-label]').textContent = language;
+		const flagElement = document.querySelector('[data-language-toggle] .flag');
+		if (flagElement) flagElement.textContent = flag;
+		localStorage.setItem('opal-language', language);
 		languageMenu.hidden = true;
 		languageToggle.setAttribute('aria-expanded', 'false');
+		document.documentElement.lang = language.toLowerCase();
 	});
 });
+
+const savedLanguage = localStorage.getItem('opal-language');
+const savedOption = [...(languageMenu?.querySelectorAll('[data-language]') ?? [])].find((option) => option.dataset.language === savedLanguage);
+if (savedOption) savedOption.click();
 
 document.querySelector('[data-search-form]')?.addEventListener('submit', async (event) => {
 	event.preventDefault();
