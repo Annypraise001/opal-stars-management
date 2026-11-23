@@ -207,6 +207,54 @@ body.theme-dark .categories-section, body.theme-dark .testimonials-section { bac
 body.theme-dark .partner-grid span { color: #202938; }
 body.theme-dark .newsletter-control input, body.theme-dark .account-modal input, body.theme-dark .account-modal textarea { color: #172033; background: #f8fafc; }
 
+.booking-page { background: #f7f9fc; }
+.catalog-hero { position: relative; display: grid; min-height: 430px; place-items: center; padding: 46px var(--page-gutter) 58px; overflow: hidden; color: #fff; background: linear-gradient(130deg, #123551, #086477 54%, #0b425b); }
+.catalog-hero-inner { position: relative; z-index: 1; width: min(100%, 840px); text-align: center; }
+.catalog-back { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 18px; color: #d9edf3; font-size: 14px; }
+.catalog-mark { width: 64px; height: 64px; display: grid; place-items: center; margin: 0 auto 18px; border: 1px solid rgb(255 255 255 / 25%); border-radius: 50%; font-size: 28px; }
+.catalog-hero h1 { margin: 0 auto 18px; max-width: 760px; font-size: clamp(42px, 6vw, 66px); line-height: 1.05; }
+.catalog-hero-inner > p:last-child { max-width: 720px; margin: 0 auto; color: #dce8ed; font-size: clamp(18px, 2.2vw, 24px); line-height: 1.55; }
+.booking-catalog { max-width: 1180px; margin: 0 auto; padding: 58px var(--page-gutter) 72px; }
+.catalog-heading { margin-bottom: 32px; text-align: center; }
+.catalog-heading h2 { margin: 0 0 10px; font-size: clamp(34px, 4vw, 48px); }
+.catalog-heading p { margin: 8px 0; color: var(--muted); }
+.catalog-count { font-size: 14px; }
+.booking-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.booking-card { min-width: 0; overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+.booking-card-image { position: relative; aspect-ratio: 1.05 / 1; overflow: hidden; background: #dce4eb; }
+.booking-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.booking-featured-tag { position: absolute; top: 14px; left: 14px; padding: 7px 12px; color: #fff; background: var(--gold); border-radius: 999px; font-size: 11px; font-weight: 800; }
+.booking-card-details { padding: 18px; }
+.booking-card-details h3 { margin: 0 0 7px; font-size: 20px; }
+.booking-card-role { min-height: 44px; margin: 0 0 12px; color: var(--muted); line-height: 1.45; }
+.booking-card-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.booking-card-actions .button-card-outline { grid-column: 1 / -1; }
+.catalog-pagination { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 34px; }
+.catalog-page-button { min-width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); cursor: pointer; }
+.catalog-page-button.is-current { color: #fff; background: var(--blue); border-color: var(--blue); }
+.catalog-range, .catalog-empty, .catalog-error { text-align: center; }
+.catalog-empty, .catalog-error { color: var(--muted); }
+.booking-cta { padding: 54px var(--page-gutter); color: #fff; background: linear-gradient(120deg, #087eaa, #1488a0 55%, #d68a17); }
+.booking-cta-inner { width: min(100%, 920px); margin: 0 auto; text-align: center; }
+.booking-cta h2 { margin: 0 0 12px; font-size: clamp(30px, 4vw, 46px); }
+.booking-cta p { margin: 0 auto 24px; max-width: 650px; color: #eff8fb; line-height: 1.55; }
+.booking-cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 900px) { .booking-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+	.catalog-hero { min-height: 400px; align-items: start; padding: 54px var(--page-gutter) 48px; }
+	.catalog-hero h1 { font-size: clamp(38px, 10vw, 52px); }
+	.catalog-hero-inner > p:last-child { font-size: 17px; }
+	.booking-catalog { padding: 44px var(--page-gutter) 54px; }
+	.booking-card-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+	.booking-card-image { aspect-ratio: 1.12 / 1; }
+	.booking-card-details { padding: 16px; }
+	.booking-card-actions { gap: 7px; }
+	.catalog-heading { margin-bottom: 24px; }
+	.catalog-heading h2 { font-size: 32px; }
+	.booking-cta-actions { display: grid; grid-template-columns: 1fr; }
+	.booking-cta-actions .button { width: 100%; }
+}
 @media (max-width: 1000px) {
 	.site-header { gap: 20px; }
 	.desktop-nav { gap: 15px; }

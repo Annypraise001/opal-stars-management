@@ -96,7 +96,7 @@ function renderPagination(page, totalPages) {
 		button.addEventListener('click', () => loadCatalog(targetPage));
 		pagination.append(button);
 	};
-+
+
 	addButton('‹', Math.max(1, page - 1), 'Previous page');
 	for (let pageNumber = 1; pageNumber <= totalPages; pageNumber += 1) {
 		addButton(String(pageNumber), pageNumber, `Page ${pageNumber}`);
@@ -316,7 +316,7 @@ document.querySelector('[data-language-toggle]').addEventListener('click', () =>
 });
 document.querySelectorAll('[data-language]').forEach((button) => {
 	button.addEventListener('click', () => {
-		document.querySelector('[data-language-label]').textContent = button.dataset.language;
+		document.querySelector('[data-language_label]').textContent = button.dataset.language;
 		document.querySelector('[data-language-menu]').hidden = true;
 		document.querySelector('[data-language-toggle]').setAttribute('aria-expanded', 'false');
 	});
