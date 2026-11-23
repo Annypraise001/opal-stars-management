@@ -349,3 +349,87 @@ body.theme-dark .newsletter-control input, body.theme-dark .account-modal input,
 	.footer-bottom { width: 100%; justify-items: start; }
 	.footer-bottom nav { width: 100%; }
 }
+
+.booking-profile-hero { min-height: 620px; display: grid; place-items: center; padding: 54px var(--page-gutter); color: #fff; background: linear-gradient(135deg, #123451, #08719a 58%, #0a4e69); text-align: center; }
+.booking-profile-inner { width: min(100%, 760px); }
+.profile-portrait { width: 230px; height: 230px; margin: 0 auto 20px; object-fit: cover; border: 7px solid rgb(255 255 255 / 18%); border-radius: 16px; box-shadow: 0 20px 45px rgb(0 0 0 / 22%); }
+.booking-profile-hero h1 { max-width: 700px; margin: 0 auto 14px; font-size: clamp(38px, 5vw, 64px); line-height: 1.08; }
+.profile-subtitle { margin: 0 auto 18px; font-size: clamp(18px, 2.2vw, 24px); }
+.profile-meta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin: 22px 0; }
+.profile-badge { display: inline-flex; padding: 8px 13px; color: #fff; background: var(--gold); border-radius: 999px; font-weight: 800; }
+.profile-chip { display: inline-flex; align-items: center; gap: 7px; padding: 10px 12px; background: rgb(255 255 255 / 10%); border: 1px solid rgb(255 255 255 / 18%); border-radius: 999px; }
+.profile-description { max-width: 680px; margin: 20px auto 0; color: #eef6f8; font-size: 18px; line-height: 1.55; }
+.profile-fee { margin: 20px 0 0; }
+.profile-fee strong { color: #ffd66b; }
+
+.booking-workspace { width: min(100%, 1180px); margin: 0 auto; padding: 58px var(--page-gutter) 80px; }
+.booking-form { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+.booking-form-header { display: grid; gap: 18px; padding: 24px 28px 0; }
+.booking-form-title { display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: center; gap: 13px; }
+.booking-form-icon { display: grid; place-items: center; width: 52px; height: 52px; color: #fff; background: var(--blue); border-radius: 12px; }
+.booking-form-title h2 { margin: 0 0 5px; font-size: 28px; }
+.booking-form-title p { margin: 0; color: var(--muted); }
+.booking-type-badge { justify-self: end; margin-top: -68px; padding: 10px 14px; color: #0d6688; background: #e9f5fa; border-radius: 999px; font-weight: 700; }
+.booking-step-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
+.booking-step-tab { min-height: 58px; color: var(--muted); background: transparent; border: 0; border-bottom: 3px solid transparent; font-weight: 700; cursor: pointer; }
+.booking-step-tab.is-active { color: var(--blue-deep); border-bottom-color: var(--blue); }
+.booking-step-panel { padding: 28px; }
+.booking-field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.booking-field-grid label, .requirements-label, .terms-agreement { display: grid; gap: 8px; min-width: 0; color: #3e4653; font-size: 15px; font-weight: 600; }
+.booking-field-grid input, .booking-field-grid select, .requirements-label textarea { display: block; width: 100%; min-width: 0; min-height: 54px; padding: 12px 15px; color: var(--ink); background: #f9fafc; border: 1px solid #d5d9df; border-radius: 10px; font: inherit; }
+.requirements-label textarea { min-height: 145px; resize: vertical; }
+.duration-field { grid-column: 1 / -1; }
+.duration-control { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; }
+.duration-control input { min-height: 28px; padding: 0; }
+.duration-control output { color: var(--blue-deep); }
+.optional-label { color: var(--muted); font-weight: 500; }
+.booking-form-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 24px; }
+.booking-form-actions-end { justify-content: flex-end; }
+.booking-validation { color: #a52c32; }
+.celebrity-requirements { margin-top: 22px; padding: 18px; background: #f8fafc; border: 1px solid var(--line); border-radius: 12px; }
+.celebrity-requirements h4 { margin: 0 0 8px; }
+.celebrity-requirements p { margin: 0; color: var(--muted); }
+.booking-summary, .payment-method-section, .payment-details { margin-bottom: 20px; padding: 22px; border: 1px solid var(--line); border-radius: 12px; }
+.booking-summary dl { display: grid; gap: 12px; }
+.booking-summary dl > div { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.booking-summary dd { margin: 0; text-align: right; }
+.summary-total { padding-top: 12px; border-top: 1px solid var(--line); font-weight: 800; }
+.payment-method-section select { width: 100%; min-height: 54px; padding: 12px 15px; }
+.booking-faq, .booking-support { margin-top: 22px; padding: 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; }
+.booking-faq details { border-bottom: 1px solid var(--line); }
+.booking-faq summary { padding: 16px 0; cursor: pointer; }
+.booking-faq details p { color: var(--muted); line-height: 1.55; }
+.booking-support { text-align: center; }
+.booking-support .service-icon { margin: 0 auto 12px; }
+.booking-support > div { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+
+@media (max-width: 700px) {
+	.booking-profile-hero { min-height: 0; padding: 36px 22px 42px; }
+	.profile-portrait { width: 210px; height: 210px; }
+	.booking-profile-hero h1 { font-size: 38px; }
+	.profile-subtitle { font-size: 17px; }
+	.profile-meta { gap: 7px; }
+	.profile-chip { width: 100%; justify-content: center; }
+	.profile-description { font-size: 16px; }
+	.booking-workspace { padding: 28px 12px 48px; }
+	.booking-form { border-radius: 14px; }
+	.booking-form-header { padding: 18px 16px 0; }
+	.booking-form-title { grid-template-columns: 44px minmax(0, 1fr); }
+	.booking-form-icon { width: 44px; height: 44px; }
+	.booking-form-title h2 { font-size: 21px; }
+	.booking-type-badge { justify-self: start; margin: 0; }
+	.booking-step-tabs { margin: 0 -16px; }
+	.booking-step-tab { min-height: 54px; padding: 8px 4px; font-size: 12px; }
+	.booking-step-panel { padding: 18px 16px; }
+	.booking-field-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+	.booking-field-grid label { width: 100%; }
+	.duration-field { grid-column: auto; }
+	.booking-form-actions { display: grid; grid-template-columns: 1fr; }
+	.booking-form-actions .button { width: 100%; }
+	.booking-form-actions-end { grid-template-columns: 1fr; }
+	.booking-faq, .booking-support { padding: 18px 16px; }
+	.booking-support > div { display: grid; grid-template-columns: 1fr; }
+	.booking-support .button { width: 100%; }
+	.booking-summary dl > div { grid-template-columns: 1fr 1fr; }
+	.profile-role { display: none; }
+}
