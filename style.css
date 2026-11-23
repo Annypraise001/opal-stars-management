@@ -221,7 +221,7 @@ body.theme-dark .newsletter-control input, body.theme-dark .account-modal input,
 	:root { --page-gutter: 22px; }
 	html { scroll-padding-top: 72px; }
 	body { padding-bottom: 0; }
-	.site-header { display: grid !important; grid-template-columns: minmax(118px, 1fr) auto; align-items: center; min-height: 92px; padding: 10px 12px; gap: 4px; }
+	.site-header { min-height: 92px; padding: 10px 12px; }
 	.brand { min-width: 118px; gap: 5px; }
 	.brand-mark { width: 44px; height: 44px; flex: 0 0 44px; }
 	.brand-name { font-size: 11px; line-height: 1; }
