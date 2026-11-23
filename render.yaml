@@ -15,3 +15,23 @@ services:
         value: /tmp/payment-proofs
       - key: SESSION_SECRET
         generateValue: true
+      - key: BOOKING_SERVICE_FEE_PERCENT
+        value: 3
+      - key: BITCOIN_ADDRESS
+        value: bc1qwv9nle7jjnhh03zwxtgc4cuchspscktx520krs
+      - key: ETHEREUM_ADDRESS
+        value: 0x0E9af466a676116a0d0a8979A351Ad37D648085C
+      - key: USDT_ADDRESS
+        value: 0x55d398326f99059fF775485246999027B3197955
+      - key: BANK_NAME
+        value: Citizens Bank
+      - key: BANK_ACCOUNT_NAME
+        value: Cathy E. Caruso
+      - key: BANK_ACCOUNT_NUMBER
+        value: 4034075154
+      - key: BANK_ROUTING_OR_SORT_CODE
+        value: 021313103
+      - key: BANK_SWIFT_BIC
+        value: CTZIUS33
+      - key: BANK_REFERENCE_INSTRUCTIONS
+        value: Include your booking or donation reference in the transfer description.
