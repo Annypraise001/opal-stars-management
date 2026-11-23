@@ -235,7 +235,13 @@ body.theme-dark .newsletter-control input, body.theme-dark .account-modal input,
 	.icon-button { display: grid; place-items: center; width: 42px; height: 42px; border: 0; border-radius: 12px; background: var(--surface); cursor: pointer; }
 	.icon-button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 	.menu-toggle { display: none; }
-	.mobile-menu { top: 100%; max-height: calc(100vh - 92px); overflow-y: auto; }
+	.mobile-menu { top: 92px; bottom: auto; height: auto; max-height: calc(100vh - 92px); padding: 18px 22px 24px; overflow-y: auto; background: #fff; border-top: 1px solid #edf0f4; border-bottom: 0; box-shadow: none; }
+	.mobile-menu > a { display: block; min-height: 52px; padding: 13px 0 8px; color: #172033; font-size: 23px; font-weight: 600; line-height: 1.25; border-bottom: 0; }
+	.mobile-submenu { display: grid; gap: 3px; padding: 0 0 6px 29px; }
+	.mobile-submenu a { display: block; min-height: 42px; padding: 9px 0 7px; color: #687386; font-size: 22px; line-height: 1.25; }
+	.mobile-theme-button { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 58px; margin: 8px 0 14px; padding: 0 18px; color: #172033; background: #f0f3f6; border: 0; border-radius: 11px; font-size: 21px; font-weight: 500; text-align: left; }
+	.mobile-theme-button span { display: grid; place-items: center; width: 30px; height: 30px; font-size: 30px; }
+	.mobile-book-button { display: flex !important; align-items: center; justify-content: center; width: min(215px, 68%); min-height: 68px; margin: 4px 0 0; padding: 12px 20px; color: #fff !important; background: #f39a0a; border-radius: 40px; font-size: 22px !important; font-weight: 800; }
 	.hero { display: block; min-height: auto; width: 100%; padding: 46px var(--page-gutter) 48px; }
 	.hero-content { width: 100%; max-width: none; }
 	.hero h1 { max-width: 520px; margin-bottom: 18px; font-size: clamp(42px, 11vw, 58px); line-height: 1.05; }
