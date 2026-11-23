@@ -180,8 +180,10 @@ function renderPaymentConfiguration(configuration) {
 	updateSummary();
 	const defaultAddress = bitcoin?.address ?? '';
 	const defaultAccount = document.querySelector('[data-default-payment-address]');
-	defaultAccount.textContent = defaultAddress ? `Bitcoin address: ${defaultAddress}` : '';
-	defaultAccount.hidden = !defaultAddress;
+	if (defaultAccount) {
+		defaultAccount.textContent = defaultAddress ? `Bitcoin address: ${defaultAddress}` : '';
+		defaultAccount.hidden = !defaultAddress;
+	}
 }
 
 paymentSelect.addEventListener('change', () => {
@@ -368,7 +370,7 @@ document.querySelector('[data-language-toggle]').addEventListener('click', () =>
 	document.querySelector('[data-language-toggle]').setAttribute('aria-expanded', String(!menu.hidden));
 });
 document.querySelectorAll('[data-language]').forEach((button) => button.addEventListener('click', () => {
-	document.querySelector('[data-language-label]').textContent = button.dataset.language;
+	document.querySelector('[data-language_label]').textContent = button.dataset.language;
 	document.querySelector('[data-language-menu]').hidden = true;
 }));
 
